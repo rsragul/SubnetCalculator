@@ -14,7 +14,11 @@
 
 ## Members
 -Pawanpreet Kaur: Project Manager, Software Developer
+
 -Dilraj Bhinder: Software Developer
+
 -Vishesh Devgan: Software Tester
+
 -Sampath Narayanan: Software Developer
+
 -Rahul Raman: Software Tester
