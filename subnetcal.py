@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import ttk
 import sys
 
 try:
@@ -96,42 +97,30 @@ if __name__ == "__main__":
     status_Value_Label = Label(Window, textvariable=status_Value, relief=SUNKEN, bg ="gray60")
     network_Entry = Entry(Window, width=15, relief="solid")
     calculate_Button = Button(Window, text="Calculate", width=15, command=calculate_Subnet, bg ="gray60", relief="solid")
-
-# ==================================  setting up lines =======================================
-    vertical = Frame(Window, bg='red', height=93, width=4)
-    vertical2 = Frame(Window, bg='red', height=93, width=4)
-    vertical3 = Frame(Window, bg='red', height=174, width=3)
-    vertical4 = Frame(Window, bg='red', height=174, width=3)
-    horizontal = Frame(Window, bg='blue', height=2, width=287)
-    horizontal2 = Frame(Window, bg='blue', height=2, width=287)
-    horizontal3 = Frame(Window, bg='blue', height=2, width=273)
-    horizontal4 = Frame(Window, bg='blue', height=2, width=273)
+    separator = ttk.Separator(Window, orient='horizontal')
+    separator2 = ttk.Separator(Window, orient='horizontal')
 
 # ==================================  adding widgets to grid =======================================
     calculate_Button.grid(row=0, column=0)
     network_Entry.grid(row=0, column=1)
-    gateway_Label.grid(row=1, column=1)
-    gateway_Value_Text.grid(row=1, column=0)
-    netmask_Label.grid(row=2, column=1)
-    netmask_Value_Text.grid(row=2, column=0)
-    hostmask_Label.grid(row=3, column=1)
-    hostmask_Value_Text.grid(row=3, column=0)
-    broadcast_Label.grid(row=4, column=1)
-    broadcast_Value_Text.grid(row=4, column=0)
-    size_Label.grid(row=5, column=0, columnspan=2, sticky=W + E)
-    ipaddr_Text.grid(row=6, column=0, columnspan=2, sticky=W + E)
-    ipaddr_Scrollbar.grid(row=6, column=2, sticky=N + S)
-    status_Value_Label.grid(row=7, column=0, columnspan=3, sticky=W + E)
 
-# ==================================  adding lines to place =======================================
-    vertical.place(x=0, y=30)
-    vertical2.place(x=283, y=30)
-    vertical3.place(x=0, y=145)
-    vertical4.place(x=270, y=145)
-    horizontal.place(x=0, y=29)
-    horizontal2.place(x=0, y=123)
-    horizontal3.place(x=0, y=144)
-    horizontal4.place(x=0, y=318)
+    separator.grid(row=1,column=0,columnspan=2, ipadx=150, ipady=1)
+
+    gateway_Label.grid(row=2, column=1)
+    gateway_Value_Text.grid(row=2, column=0)
+    netmask_Label.grid(row=3, column=1)
+    netmask_Value_Text.grid(row=3, column=0)
+    hostmask_Label.grid(row=4, column=1)
+    hostmask_Value_Text.grid(row=4, column=0)
+    broadcast_Label.grid(row=5, column=1)
+    broadcast_Value_Text.grid(row=5, column=0)
+
+    separator2.grid(row=6,column=0,columnspan=2, ipadx=150, ipady=1)
+
+    size_Label.grid(row=7, column=0, columnspan=2, sticky=W + E)
+    ipaddr_Text.grid(row=8, column=0, columnspan=2, sticky=W + E)
+    ipaddr_Scrollbar.grid(row=8, column=2, sticky=N + S)
+    status_Value_Label.grid(row=9, column=0, columnspan=3, sticky=W + E)
 
 # ==================================  adding placeholder =======================================
     network_Entry.insert(0, "Network Address")
